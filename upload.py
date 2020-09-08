@@ -22,10 +22,16 @@ def key_exists(mykey, mybucket):
 				return True
 		return False
 
+# if key_exists('uploads/999239833temp.jpg', 'sathio-production'):
+#     print("key exists")
+# else:
+#     print("safe to put new bucket object")
+
+
 for file in os.listdir('media/'):
 	file_name = 'media/'+file
 	print(file_name)
-	if key_exists(file_name,'production-bucket'):
+	if key_exists(file_name,'pro-sathio-bucket'):
 		print("key exists")
 	else:
 		print("safe to put new bucket object")
